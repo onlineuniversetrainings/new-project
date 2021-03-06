@@ -1,0 +1,147 @@
+.sr-only{
+  border:0; clip:rect(1px, 1px, 1px, 1px); clip-path:inset(50%); height:1px; margin:-1px; overflow:hidden; padding:0; position:absolute; width:1px; word-wrap:normal !important;
+}
+.canvas-wrapper{
+  height:calc(100vh - 70px);  overflow:scroll;
+}
+#canvas{
+  position:relative;
+}
+#canvas,
+svg.all-links{
+  width:1000vw; height:1000vh;
+}
+.interactions{
+  position:absolute; top:0;
+}
+svg.all-links{
+  background:cornflowerblue;
+}
+.all-links path._link{
+  stroke-width:4px; stroke:darkblue; stroke:rgba(0, 0, 0, 0.26); fill:none; cursor:pointer;
+}
+.all-links path._link:hover,
+.all-links path._link:focus{
+  stroke:#ff7f50; stroke-width:8px; outline:none;
+}
+.create-interaction{
+  display:flex; justify-content:flex-end; gap:8px;
+}
+.create-interaction ._new{
+  background:aliceblue; color:#000; font-weight:normal; border:1px solid cornflowerblue; border-radius:3px; margin:1em; padding:8px; font:inherit;
+}
+dialog.add-or-edit-interaction-modal{
+  width:500px; padding:0 0 3em; border:none; border-radius:4px; overflow:hidden;
+}
+dialog.add-or-edit-interaction-modal header{
+  display:flex; justify-content:space-between; background:#f1f1f1; border-bottom:1px solid #e6e6e6; margin-bottom:32px;
+}
+dialog.add-or-edit-interaction-modal .-pad-1{
+  padding:1rem;
+}
+dialog.add-or-edit-interaction-modal .-pad-r-0{
+  padding-right:0;
+}
+dialog.add-or-edit-interaction-modal ._edit-node-type{
+  padding:0; margin-top:0; height:36px; width:72px;
+}
+dialog.add-or-edit-interaction-modal label{
+  font-size:13px;
+}
+dialog.add-or-edit-interaction-modal input[type=text],
+dialog.add-or-edit-interaction-modal select{
+  padding:8px; border:1px solid #ccc; border-radius:4px; font-family:inherit; color:#444; display:block; box-sizing:border-box; width:100%; margin-top:.25em;
+}
+dialog.add-or-edit-interaction-modal::backdrop{
+  background:rgba(0,0,0,.5);
+}
+dialog.add-or-edit-interaction-modal button{
+  background:darkslateblue; color:#fff; border:none; padding:8px; border-radius:3px; font-family:inherit; font-weight:500; margin:.5em 0;
+}
+dialog.add-or-edit-interaction-modal ._bot-message-wrapper input{
+  display:inline-block; width:calc(100% - 36px);
+}
+dialog.add-or-edit-interaction-modal ._bot-message-wrapper button,
+dialog.add-or-edit-interaction-modal fieldset button{
+  width:36px; height:36px; margin:0; background:none; color:darkslateblue; font-size:24px; padding:0; vertical-align:middle;
+}
+dialog.add-or-edit-interaction-modal ._form-and-buttons-section{
+  background:aliceblue; border-top:1px solid #e5f3ff; border-bottom:1px solid #e5f3ff; margin-top:1rem;
+}
+dialog.add-or-edit-interaction-modal ._form-and-buttons-section header{
+  padding-bottom:8px; border-bottom:1px solid hsl(60, 56%, 51%); position:relative; top:-8px; text-align:right;
+}
+dialog.add-or-edit-interaction-modal ._form-and-buttons-section header label{
+  display:inline-block;
+}
+dialog.add-or-edit-interaction-modal ._form-and-buttons-section header select{
+  background:transparent; padding:4px;
+}
+dialog.add-or-edit-interaction-modal[data-type=buttons] ._define-form,
+dialog.add-or-edit-interaction-modal[data-type=form] ._define-buttons,
+dialog.add-or-edit-interaction-modal[data-type=text] ._define-buttons,
+dialog.add-or-edit-interaction-modal[data-type=text] ._define-form{
+  display:none;
+}
+dialog.add-or-edit-interaction-modal fieldset{
+  margin-bottom:1em; padding:0; border:none;
+}
+dialog.add-or-edit-interaction-modal fieldset > span{
+  display:flex; align-items:flex-end; justify-content:space-between;
+}
+dialog.add-or-edit-interaction-modal fieldset > span button{
+  margin:0;
+}
+dialog.add-or-edit-interaction-modal fieldset label + label{
+  margin-left:8px;
+}
+dialog.add-or-edit-interaction-modal ._save-or-cancel{
+  position:absolute; bottom:0; left:0; padding:0 1em; width:100%; box-sizing:border-box; text-align:right;
+}
+#_start{
+  background:seagreen; color:#fff;
+}
+.interaction{
+  position:absolute; user-select:none; /*border:1px solid #ccc;*/ border-radius:8px; background:#fff; width:200px;
+}
+.interaction:hover,
+.interaction:focus{
+  background:coral; color:#fff; outline-color:#fff;
+}
+.interaction ._content,
+.interaction ._fields{
+  padding:16px;
+}
+.interaction ._title{
+  background:dodgerblue; color:#fff; padding:4px 8px; border-radius:8px 0; font-size:13px; font-weight:bold; display:inline-block;
+}
+.interaction ._text-msgs {
+  max-height:21px; text-overflow:ellipsis; overflow:hidden; border:8px solid transparent;
+}
+.interaction ._fields{
+  text-align:center; border-top:1px solid #e4e4e4; border-top:1px solid #00000021;
+}
+.interaction p{
+  margin:0; width:100%; display:inline; font-size:15px; white-space:nowrap; text-overflow:ellipsis;
+}
+.interaction p + p:before{
+  content:"|"; color:#fff; color:rgba(255,255,255,.7); margin:0 1ch;
+}
+.interaction.-buttons ._switch{
+  border-top:1px solid #ccc; border-top:1px solid #00000021; width:100%; box-sizing:border-box; position:relative; padding:12px 16px; text-align:right; font-size:15px; font-weight:500; font-variant-caps:all-petite-caps; letter-spacing:.1em;
+}
+.has-hook ._hook{
+  width:16px; height:16px; background:#ccc; border-radius:50%; position:absolute; top:50%; transform:translate(-50%, -50%);
+}
+.has-hook ._hook.-source{
+  left:100%;
+}
+.has-hook ._hook.-destination{
+  left:0;
+}
+#_start ._hook.-destination{
+  display:none;
+}
+.has-hook ._hook:not(.-engaged):hover{
+  background:coral; cursor:crosshair;
+}

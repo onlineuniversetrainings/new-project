@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'board/css/interaction.css' %}">
+    <style media="screen">
+        body {
+            margin: 0;
+            font-family: Roboto, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="create-interaction">
+        <button class="_new">Interaction</button>
+    </div>
+    <div class="canvas-wrapper">
+        <div id="canvas">
+            <svg class="all-links"></svg>
+            <div class="interactions"></div>
+        </div>
+    </div>
+    <script src="{% static 'board/js/store.js' %}" charset="utf-8"></script>
+    <script src="{% static 'board/js/interactions.js' %}" charset="utf-8"></script>
+    <script type="text/javascript">
+        var chat = {
+            nodes: {
+                _start: {
+                    id: '_start',
+                    title: 'Start',
+                    position: {
+                        top: 124,
+                        left: 43
+                    },
+                    type: 'buttons',
+                    text: [],
+                    switches: {}
+                }
+            }
+        }
+        //chat = undefined
+        var store = Store(chat)
+        /*store.addNodes([{
+          id: 'kamt59kd59',
+          type: 'buttons',
+          data: {
+            text: ['Choose one of the following.'],
+            switches: ['kamt59kd27']
+          },
+          position: {
+            top: 47,
+            left: 700
+          }
+        },
+        {
+          id: 'kamt59kd27',
+          type: 'button',
+          parentNode: 'kamt59kd1',
+          data: {
+            title : "D-jango",
+            payload : "/django"
+          }
+        }]);*/
+
+
+        //store.getNode(nodeId);
+    </script>
+</body>
+
+</html>
